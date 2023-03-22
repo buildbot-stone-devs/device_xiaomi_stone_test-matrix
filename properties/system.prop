@@ -64,6 +64,9 @@ media.stagefright.thumbnail.prefer_hw_codecs=true
 persist.mm.enable.prefetch=true
 vendor.mm.enable.qcom_parser=16777215
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
+
 # Netflix custom property
 ro.netflix.bsp_rev=Q4350-32962-1
 
