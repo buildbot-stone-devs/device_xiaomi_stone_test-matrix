@@ -59,11 +59,9 @@
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
         "0",
-        "692",
-        "308",
-        "232",
-        "154",
-        "78"
+        "25",
+        "35",
+        "50"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -73,7 +71,7 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
-        "159"
+        "30"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -311,7 +309,7 @@
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
       "Duration": 0,
-      "Value": "78"
+      "Value": "25"
     },
     {
       "PowerHint": "INTERACTION",
@@ -399,14 +397,14 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
-      "Duration": 5000,
-      "Value": "692"
+      "Duration": 2500,
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampFgMin",
-      "Duration": 5000,
-      "Value": "159"
+      "Duration": 2500,
+      "Value": "30"
     },
     {
       "PowerHint": "LAUNCH",
