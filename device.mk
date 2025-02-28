@@ -4,8 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Call the ViperFX Config
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
 
 # Vendor Dolby
 $(call inherit-product, vendor/dolby/dolby.mk)
