@@ -27,6 +27,7 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -41,7 +42,17 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+
+        // Dirac
+        try {
+            DiracUtils.getInstance(context);
+        } catch (Exception e) {
+            Log.d(TAG, "Dirac is not present in system");
+        }
+        // Thermal Profiles
         ThermalUtils.startService(context);
+
+       // Refresh Rate
         RefreshUtils.initialize(context);
         
         // DC Dimming
