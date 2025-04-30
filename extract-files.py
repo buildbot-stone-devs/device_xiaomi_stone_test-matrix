@@ -18,8 +18,13 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/stone',
+    'hardware/qcom-caf/wlan',
     'hardware/qcom-caf/sm8350',
     'hardware/xiaomi',
+    'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/dataservices',
+    'vendor/qcom/opensource/display',
 ]
 
 blob_fixups: blob_fixups_user_type = {
@@ -49,7 +54,6 @@ module = ExtractUtilsModule(
     'xiaomi',
     blob_fixups=blob_fixups,
     namespace_imports=namespace_imports,
-    check_elf=False,
 )
 
 if __name__ == '__main__':
